@@ -1,0 +1,6 @@
+{
+  "name": "Auto Assign",
+  "description": "이슈와 PR 생성 시 담당자를 자동 할당합니다.",
+  "iconName": "octicon person",
+  "categories": ["Automation"]
+}
