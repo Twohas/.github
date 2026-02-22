@@ -1,0 +1,26 @@
+name: Auto Assign
+on:
+  workflow_call:
+    inputs:
+      assignees:
+        description: "Comma-separated list of assignees"
+        required: false
+        type: string
+        default: "ruin8452"
+      numOfAssignee:
+        description: "Number of assignees to add"
+        required: false
+        type: number
+        default: 1
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write
+      pull-requests: write
+    steps:
+      - name: Auto-assign issue
+        uses: pozil/auto-assign-issue@v2
+        with:
+          assignees: ${{ inputs.assignees }}
+          numOfAssignee: ${{ inputs.numOfAssignee }}
