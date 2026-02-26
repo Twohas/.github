@@ -2,8 +2,6 @@ name: 버그 리포트 (Bug Report)
 description: 버그나 오류를 보고합니다.
 title: "[Bug] "
 labels: ["bug"]
-assignees:
-
 body:
 
   - type: input
@@ -99,6 +97,6 @@ body:
       placeholder: |
         - P1 - 치명적 (앱 사용 불가)
         - P2 - 주요 (핵심 기능 장애)
-        - P3 - 보통 (사용不便 但 정상 사용 가능)
+        - P3 - 보통 (사용에 불편이 있으나 정상 사용 가능)
     validations:
       required: false
