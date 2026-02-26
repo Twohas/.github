@@ -1,0 +1,77 @@
+name: 기능 요청 (Feature Request)
+description: 새로운 기능이나 개선 사항을 요청합니다.
+title: "[Feature] "
+labels: ["feature"]
+assignees:
+
+body:
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 기능 설명
+      description: 이 기능이 무엇을 하는지 설명하세요.
+      placeholder: |
+        - 해결하려는 문제:
+        - 기대 효과:
+    validations:
+      required: true
+
+  - type: textarea
+    id: user_scenario
+    attributes:
+      label: 사용자 시나리오
+      description: 사용자 관점에서 이 기능이 어떻게 사용되는지 설명하세요.
+      placeholder: |
+        1. 사용자는 [환경]에서
+        2. [동작]을 하고
+        3. [결과]를 받는다
+    validations:
+      required: true
+
+  - type: textarea
+    id: analytics
+    attributes:
+      label: 분석 지표 (Analytics)
+      description: 이 기능과 관련된 분석 지표를 입력하세요.
+      placeholder: |
+        ### Google Analytics
+        - 이벤트명:
+        - 파라미터:
+        
+        ### Google Crashlytics
+        - 추적할 크래시 영역:
+    validations:
+      required: false
+
+  - type: textarea
+    id: test
+    attributes:
+      label: 테스트
+      description: 이 기능을 검증하기 위한 테스트 방법을 입력하세요.
+      placeholder: |
+        ### 테스트 방법
+        - [ ] 단위 테스트
+        - [ ] Android 실기기 테스트
+        - [ ] iOS 실기기 테스트
+        
+        ### 엣지 케이스
+        - 네트워크 끊김 상황
+        - 앱 백그라운드 복귀
+        - 오래된 앱 버전 데이터
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: 의존성 / 리스크
+      description: 외부 서비스, SDK, 정책 의존 사항과 예상되는 리스크를 입력하세요.
+      placeholder: |
+        ### 의존성
+        - ...
+        
+        ### 리스크
+        - ...
+    validations:
+      required: false

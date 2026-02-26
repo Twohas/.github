@@ -73,6 +73,9 @@
 
 ### 참조
 
+- 앱 정의/기능 정의 상세 문서: `docs/app-definition-and-feature-definition.md`
+- GitHub 이슈/프로젝트 운영 가이드: `docs/github-operation.md`
+#BB|
 - 앱 정의/기능 정의 상세 문서: `docs/solo-dev/app-definition-and-feature-definition.md`
 
 ## 6) 이슈 템플릿에 먼저 넣을 핵심 3개 필드

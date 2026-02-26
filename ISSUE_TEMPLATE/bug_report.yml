@@ -1,0 +1,104 @@
+name: 버그 리포트 (Bug Report)
+description: 버그나 오류를 보고합니다.
+title: "[Bug] "
+labels: ["bug"]
+assignees:
+
+body:
+
+  - type: input
+    id: introduced_in
+    attributes:
+      label: 버그가 확인된 버전 (introduced_in)
+      description: 버그가 처음 발견된 앱 버전을 입력하세요.
+      placeholder: 예: v1.2.0
+    validations:
+      required: true
+
+  - type: dropdown
+    id: symptom_area
+    attributes:
+      label: 증상 영역 (symptom_area)
+      description: 버그가 발생한 기능 영역을 선택하세요.
+      options:
+        - login - 로그인/인증
+        - payment - 결제
+        - sync - 데이터 동기화
+        - ui - 화면/UI
+        - network - 네트워크
+        - crash - 앱 크래시
+        - other - 기타
+    validations:
+      required: true
+
+  - type: dropdown
+    id: origin
+    attributes:
+      label: 원인 파악 여부 (origin)
+      description: 버그의 원인을 알고 계신가요?
+      options:
+        - unknown - 모름 (처음 등록 시에는 unknown으로 시작)
+        - known - 알고 있음
+    validations:
+      required: true
+
+  - type: input
+    id: caused_by_issue
+    attributes:
+      label: 원인 이슈 번호 (caused_by_issue)
+      description: 이 버그를 야기한 원인이 되는 이슈 번호가 있다면 입력하세요. (선택)
+      placeholder: 예: #123
+    validations:
+      required: false
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 버그 설명
+      description: 버그가 무엇인지, 어떻게 발생했는지 설명하세요.
+      placeholder: |
+        ### 재현 절차
+        1. ...
+        2. ...
+        3. ...
+        
+        ### 예상 결과
+        ...
+        
+        ### 실제 결과
+        ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: environment
+    attributes:
+      label: 환경 정보
+      description: 버그가 발생한 환경을 입력하세요.
+      placeholder: |
+        - 기기: iPhone 15 / Galaxy S24
+        - OS: iOS 17.2 / Android 14
+        - 네트워크: Wi-Fi / 5G
+    validations:
+      required: false
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: 임시 해결 방법
+      description: 임시로 사용할 수 있는 해결 방법이 있다면 입력하세요.
+      placeholder: 사용자가 할 수 있는 임시 해결 방법
+    validations:
+      required: false
+
+  - type: textarea
+    id: severity
+    attributes:
+      label: 심각도
+      description: 버그의 심각도를 선택하거나 설명하세요.
+      placeholder: |
+        - P1 - 치명적 (앱 사용 불가)
+        - P2 - 주요 (핵심 기능 장애)
+        - P3 - 보통 (사용不便 但 정상 사용 가능)
+    validations:
+      required: false
