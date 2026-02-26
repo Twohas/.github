@@ -1,7 +1,7 @@
 name: 버그 리포트 (Bug Report)
 description: 버그나 오류를 보고합니다.
 title: "[Bug] "
-labels: ["bug"]
+type: bug
 body:
 
   - type: input
@@ -9,7 +9,7 @@ body:
     attributes:
       label: 버그가 확인된 버전 (introduced_in)
       description: 버그가 처음 발견된 앱 버전을 입력하세요.
-      placeholder: 예: v1.2.0
+      placeholder: "예: v1.2.0"
     validations:
       required: true
 
@@ -45,7 +45,7 @@ body:
     attributes:
       label: 원인 이슈 번호 (caused_by_issue)
       description: 이 버그를 야기한 원인이 되는 이슈 번호가 있다면 입력하세요. (선택)
-      placeholder: 예: #123
+      placeholder: "예: #123"
     validations:
       required: false
 
